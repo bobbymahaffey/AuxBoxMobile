@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "658144910519",
+    "firebase_url": "https://auxbox-29cc0.firebaseio.com",
+    "project_id": "auxbox-29cc0",
+    "storage_bucket": "auxbox-29cc0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658144910519:android:36bc18f1e4c44afa368132",
+        "android_client_info": {
+          "package_name": "com.example.auxbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658144910519-62rcvhoflea2f78nomnjq282a2q09l0u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.auxbox",
+            "certificate_hash": "89c9c45ae024a7053e8ad49cb95c93e875441862"
+          }
+        },
+        {
+          "client_id": "658144910519-kr4hitli3lijdgavdacmbde3r0ug4k92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlxf0SFM3SYucpavaFK9SUKwgr7PWFXkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658144910519-kr4hitli3lijdgavdacmbde3r0ug4k92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658144910519:android:2142abdc89e5b34a368132",
+        "android_client_info": {
+          "package_name": "com.example.auxbox20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658144910519-73jvuc6l327p7mnttvroeijl455u2ugj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.auxbox20",
+            "certificate_hash": "89c9c45ae024a7053e8ad49cb95c93e875441862"
+          }
+        },
+        {
+          "client_id": "658144910519-kr4hitli3lijdgavdacmbde3r0ug4k92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlxf0SFM3SYucpavaFK9SUKwgr7PWFXkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658144910519-kr4hitli3lijdgavdacmbde3r0ug4k92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658144910519:android:9f9e72313ffa4124368132",
+        "android_client_info": {
+          "package_name": "com.example.auxboxdev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658144910519-8jk35946bsnm76dgfprnb7efr77dochf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.auxboxdev",
+            "certificate_hash": "89c9c45ae024a7053e8ad49cb95c93e875441862"
+          }
+        },
+        {
+          "client_id": "658144910519-kr4hitli3lijdgavdacmbde3r0ug4k92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlxf0SFM3SYucpavaFK9SUKwgr7PWFXkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658144910519-kr4hitli3lijdgavdacmbde3r0ug4k92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658144910519:android:a834cff23ad376bb368132",
+        "android_client_info": {
+          "package_name": "com.robertjbosch.auxboxredux"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658144910519-jgo6j2tnaqqbkf0nkiea22tnv8c1di7c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.robertjbosch.auxboxredux",
+            "certificate_hash": "5c961355cfd75f0da25b90b1a3fd3ee711f93101"
+          }
+        },
+        {
+          "client_id": "658144910519-kr4hitli3lijdgavdacmbde3r0ug4k92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlxf0SFM3SYucpavaFK9SUKwgr7PWFXkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658144910519-kr4hitli3lijdgavdacmbde3r0ug4k92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
