@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Aux Box</string>
+    <string name="PlaySongText">Play Song</string>
+    <string name="HostSessionText">Host Session</string>
+    <string name="CreateASessionText">Create a Session</string>
+    <string name="CreateText">Create</string>
+    <string name="JoinASessionText">Join a Session</string>
+    <string name="JoinText">Join</string>
+    <string name="LogOutText">LogOut</string>
+    <string name="AuxBoxText">AuxBox</string>
+    <string name="CreateANewAccountText">Create a new Account</string>
+    <string name="FullNameTextHint">Full Name:</string>
+    <string name="PasswordTextHint">Password:</string>
+    <string name="EmailTextHint">Email:</string>
+    <string name="PhoneNumberTextHint">Phone Number:</string>
+    <string name="RegisterText">Register</string>
+    <string name="AlreadyAMemberText">Already a Member? Login</string>
 </resources>
