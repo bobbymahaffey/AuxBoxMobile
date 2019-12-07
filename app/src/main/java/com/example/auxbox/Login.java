@@ -46,33 +46,33 @@ public class Login extends AppCompatActivity {
 
                 //check if empty
                 if(TextUtils.isEmpty(email)){
-                    mEmail.setError("Must provide a valid email");
+                    mEmail.setError(getString(R.string.error_email));
                     return;
                 }
 
                 if(TextUtils.isEmpty(password)){
-                    mPassword.setError(" A valid password os required");
+                    mPassword.setError(getString(R.string.error_password_blank));
                     return;
                 }
 
                 if(password.length() < 5){
-                    mPassword.setError(" Password must be at least 5 characters");
+                    mPassword.setError(getString(R.string.error_password_length));
                     return;
                 }
 
                 //Display the progress Bar
                 progressBar.setVisibility(View.VISIBLE);
 
-                //authenticatet the user
+                //authenticate the user
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //check if log in is successful
                         if(task.isSuccessful()){
-                            Toast.makeText(Login.this, " Log in successful", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, getString(R.string.login_successful), Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }else{
-                            Toast.makeText(Login.this, " Error not logged in", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, getString(R.string.login_failed), Toast.LENGTH_SHORT).show();
                             //make progress bar disappear after loading
                             progressBar.setVisibility(View.GONE);
                         }
