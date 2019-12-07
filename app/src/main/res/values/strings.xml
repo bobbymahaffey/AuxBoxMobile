@@ -33,5 +33,6 @@
     <string name="song_save_text">Save Song</string>
     <string name="new_user">Not yet a member? Create a new Account</string>
     <string name="pause_text">Pause</string>
+    <string name="song_link_text">Song Title</string>
 
 </resources>
