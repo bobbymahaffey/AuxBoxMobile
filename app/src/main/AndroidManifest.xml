@@ -15,15 +15,15 @@
             android:screenOrientation="portrait"></activity>
         <activity android:name=".Host"
             android:screenOrientation="portrait"/>
-        <activity android:name=".Login"
-            android:screenOrientation="portrait"/>
         <activity android:name=".Register"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Login"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
