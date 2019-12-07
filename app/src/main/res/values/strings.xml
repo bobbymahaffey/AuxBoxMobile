@@ -26,5 +26,10 @@
     <string name="register_failed">Error! User account was not created!</string>
     <string name="play_text">Play</string>
     <string name="stop_text">Stop</string>
+    <string name="upload_button_text">UPLOAD</string>
+    <string name="file_not_found">No file!</string>
+    <string name="user_session_text">User Session</string>
+    <string name="song_title_text">Song Title</string>
+    <string name="song_save_text">Save Song</string>
 
 </resources>

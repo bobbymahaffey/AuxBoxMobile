@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:fontFamily="@font/aclonica"
-        android:text="Not yet a member ? Create a new Account"
+        android:text="@string/new_user"
         android:textColor="@android:color/background_light"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
