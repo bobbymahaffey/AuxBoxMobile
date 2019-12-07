@@ -31,5 +31,6 @@
     <string name="user_session_text">User Session</string>
     <string name="song_title_text">Song Title</string>
     <string name="song_save_text">Save Song</string>
+    <string name="new_user">Not yet a member? Create a new Account</string>
 
 </resources>
