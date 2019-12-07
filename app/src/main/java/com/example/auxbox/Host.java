@@ -13,7 +13,11 @@ public class Host extends AppCompatActivity {
 
     Button mPlayBtn;
     Button mStopBtn;
+    Button mPauseBtn;
+
     MediaPlayer mediaPlayer;
+
+    boolean playing = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,27 +26,35 @@ public class Host extends AppCompatActivity {
 
         mPlayBtn = findViewById(R.id.playButton);
         mStopBtn = findViewById(R.id.stopButton);
+        mPauseBtn = findViewById(R.id.pauseButton);
 
         mPlayBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 playSong();
             }
         });
         mStopBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 stopSong();
+            }
+        });
+        mPauseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pauseSong();
             }
         });
     }
 
     public void playSong()
     {
-        prepare();
+        if(!playing) {
+            prepare();
+        }
         mediaPlayer.start();
+        playing = true;
     }
 
     public void stopSong()
@@ -50,6 +62,12 @@ public class Host extends AppCompatActivity {
             mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = null;
+            playing = false;
+    }
+
+    public void pauseSong()
+    {
+        mediaPlayer.pause();
     }
 
     private void prepare()
