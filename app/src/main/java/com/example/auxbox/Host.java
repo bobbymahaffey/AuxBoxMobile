@@ -27,28 +27,28 @@ public class Host extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                playSong(mediaPlayer);
+                playSong();
             }
         });
         mStopBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                stopSong(mediaPlayer);
+                stopSong();
             }
         });
     }
 
-    public void playSong(MediaPlayer m)
+    public void playSong()
     {
         prepare();
-        m.start();
+        mediaPlayer.start();
     }
 
-    public void stopSong(MediaPlayer m)
+    public void stopSong()
     {
-            m.stop();
-            m.release();
+            mediaPlayer.stop();
+            mediaPlayer.release();
             mediaPlayer = null;
     }
 
