@@ -78,17 +78,17 @@ public class Register extends AppCompatActivity{
 
                 //check if empty
                 if(TextUtils.isEmpty(email)){
-                    mEmail.setError("Must provide a valid email");
+                    mEmail.setError(getString(R.string.error_email));
                     return;
                 }
 
                 if(TextUtils.isEmpty(password)){
-                    mPassword.setError(" A valid password os required");
+                    mPassword.setError(getString(R.string.error_password_blank));
                     return;
                 }
 
                 if(password.length() < 5){
-                    mPassword.setError(" Password must be at least 5 characters");
+                    mPassword.setError(getString(R.string.error_password_length));
                     return;
                 }
 
@@ -101,7 +101,7 @@ public class Register extends AppCompatActivity{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //the process of registering the user is called a task
                         if(task.isSuccessful()){
-                            Toast.makeText(Register.this, "user was created", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, getString(R.string.register_successful1) + userID + getString(R.string.register_successful2), Toast.LENGTH_SHORT).show();
 
                             //save the ID of the current user
                             userID = fAuth.getCurrentUser().getUid();
@@ -134,7 +134,7 @@ public class Register extends AppCompatActivity{
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         }else{
                             //error account not created
-                            Toast.makeText(Register.this, "Error user not created!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, getString(R.string.register_failed) + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             //make progress bar disappear after loading
                             progressBar.setVisibility(View.GONE);
 

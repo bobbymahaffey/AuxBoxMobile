@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Aux Box</string>
+    <string name="error_email">An email address must be provided</string>
+    <string name ="error_password_blank">A valid password is required"</string>
+    <string name="error_password_length">Password must be at least 5 characters</string>
+    <string name="login_successful">Login successful!</string>
+    <string name="login_failed">Error! Not logged in!</string>
+
+    <string name="register_successful1">User account </string>
+    <string name="register_successful2"> was created!</string>
+    <string name="register_failed">Error! User account was not created!</string>
+
 </resources>
