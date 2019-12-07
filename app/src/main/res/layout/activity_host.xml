@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".Host">
 
+    <Button
+        android:id="@+id/pauseButton"
+        android:layout_width="412dp"
+        android:layout_height="62dp"
+        android:text="@string/pause_text"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playButton" />
+
     <TextView
         android:id="@+id/hostSessiontxt"
         android:layout_width="wrap_content"
@@ -41,6 +52,7 @@
         android:text="@string/stop_text"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playButton" />
+        app:layout_constraintTop_toBottomOf="@+id/pauseButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
