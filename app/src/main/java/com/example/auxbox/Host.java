@@ -11,13 +11,14 @@ package com.example.auxbox;
 
 public class Host extends AppCompatActivity {
 
-    Button mPlayBtn;
-    Button mStopBtn;
-    Button mPauseBtn;
+    private Button mPlayBtn;
+    private Button mStopBtn;
+    private Button mPauseBtn;
 
-    MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer;
 
-    boolean playing = false;
+    private boolean playing = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
