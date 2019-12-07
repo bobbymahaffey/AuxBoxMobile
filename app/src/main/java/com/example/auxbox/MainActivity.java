@@ -3,20 +3,25 @@ package com.example.auxbox;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
     private Button hostButton;
     private Button userButton;
+    private Button playButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         userButton = (Button) findViewById(R.id.joinbtn);
         userButton.setOnClickListener(new View.OnClickListener() {
@@ -33,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 openUserSession();
             }
         });
+
     }
 
-    private void openJoinSession(){
+    public void openJoinSession(){
         Intent intent = new Intent(this, User.class);
         startActivity(intent);
     }
