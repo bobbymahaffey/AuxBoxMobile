@@ -23,50 +23,45 @@ public class Host extends AppCompatActivity {
         mPlayBtn = findViewById(R.id.playButton);
         mStopBtn = findViewById(R.id.stopButton);
 
-        mediaPlayer = new MediaPlayer();
         mPlayBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                playSong(v, mediaPlayer);
+                playSong(mediaPlayer);
             }
         });
         mStopBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                stopSong(v, mediaPlayer);
+                stopSong(mediaPlayer);
             }
         });
     }
 
-    public void playSong(View v, MediaPlayer m)
+    public void playSong(MediaPlayer m)
     {
-        try
-        {
-            m.setDataSource("https://firebasestorage.googleapis.com/v0/b/auxbox-29cc0.appspot.com/o/youtubnow.co%20-%20Maroon%205%20-%20Memories.mp3?alt=media&token=6d69241e-1da8-47e1-afe9-8439e966493a");
-            m.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    mp.start();
-                }
-            });
+        prepare();
+        m.start();
+    }
 
-            m.prepare();
-        }catch(IOException e)
+    public void stopSong(MediaPlayer m)
+    {
+            m.stop();
+            m.release();
+            mediaPlayer = null;
+    }
+
+    private void prepare()
+    {
+        mediaPlayer = new MediaPlayer();
+        try {
+            mediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/auxbox-29cc0.appspot.com/o/youtubnow.co%20-%20Maroon%205%20-%20Memories.mp3?alt=media&token=6d69241e-1da8-47e1-afe9-8439e966493a");
+            mediaPlayer.prepare();
+        } catch(IOException e)
         {
             e.printStackTrace();
         }
-    }
-
-    public void stopSong(View v, MediaPlayer m)
-    {
-            m.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    mp.stop();
-                }
-            });
     }
 }
 
