@@ -9,6 +9,10 @@ package com.example.auxbox;
         import android.view.View;
         import android.widget.Button;
 
+        import com.google.android.gms.tasks.OnCompleteListener;
+        import com.google.android.gms.tasks.OnFailureListener;
+        import com.google.android.gms.tasks.OnSuccessListener;
+        import com.google.android.gms.tasks.Task;
         import com.google.firebase.database.DataSnapshot;
         import com.google.firebase.database.DatabaseError;
         import com.google.firebase.database.DatabaseReference;
@@ -16,6 +20,7 @@ package com.example.auxbox;
         import com.google.firebase.database.ValueEventListener;
         import com.google.firebase.firestore.CollectionReference;
         import com.google.firebase.firestore.DocumentReference;
+        import com.google.firebase.firestore.DocumentSnapshot;
         import com.google.firebase.firestore.FirebaseFirestore;
         import java.io.IOException;
         import java.util.Collection;
@@ -28,6 +33,7 @@ public class Host extends AppCompatActivity {
     private Button mStopBtn;
     private Button mPauseBtn;
     private FirebaseDatabase fDatabase;
+    private FirebaseFirestore fFirestore;
     final String TAG = "TAG";
     private String source = "";
 
@@ -46,6 +52,7 @@ public class Host extends AppCompatActivity {
         mStopBtn = findViewById(R.id.stopButton);
         mPauseBtn = findViewById(R.id.pauseButton);
         fDatabase = FirebaseDatabase.getInstance();
+        fFirestore = FirebaseFirestore.getInstance();
 
         mPlayBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,9 +101,27 @@ public class Host extends AppCompatActivity {
     private void prepare()
     {
         mediaPlayer = new MediaPlayer();
-        DatabaseReference dRef = fDatabase.getReference();
-        //idk how to get the string from the database
-        source = "https://firebasestorage.googleapis.com/v0/b/auxbox-29cc0.appspot.com/o/Coldplay%20-%20Orphans.mp3?alt=media&token=505fe083-1df8-4b5c-8c5f-db25ca540c71";
+        DocumentReference docRef = fFirestore.collection("playlist").document("demo");
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        Log.d(TAG, "DocumentSnapshot data: " + document.getData());
+                        source = document.getData().toString();
+                        String temp[] = source.split("=", 2);
+                        source = temp[1];
+                    } else {
+                        Log.d(TAG, "No such document");
+                    }
+                } else {
+                    Log.d(TAG, "get failed with ", task.getException());
+                }
+
+
+            }
+        });
 
         try {
             if (source.length() > 20) {
