@@ -91,6 +91,7 @@ public class Host extends AppCompatActivity {
     {
         mediaPlayer = new MediaPlayer();
         DatabaseReference dRef = fDatabase.getReference();
+        //idk how to get the string from the database
         source = "https://firebasestorage.googleapis.com/v0/b/auxbox-29cc0.appspot.com/o/Coldplay%20-%20Orphans.mp3?alt=media&token=505fe083-1df8-4b5c-8c5f-db25ca540c71";
 
         try {

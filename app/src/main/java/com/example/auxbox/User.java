@@ -77,6 +77,14 @@ public class User extends AppCompatActivity {
                         songLink = "https://firebasestorage.googleapis.com/v0/b/auxbox-29cc0.appspot.com/o/youtubnow.co%20-%20Maroon%205%20-%20Memories.mp3?alt=media&token=6d69241e-1da8-47e1-afe9-8439e966493a";
                         break;
                     }
+                    case "Daft": {
+                        songLink = "https://firebasestorage.googleapis.com/v0/b/auxbox-29cc0.appspot.com/o/Daft%20Punk%20-%20Voyager.mp3?alt=media&token=1d5fd624-50eb-4cee-80bb-48586d1d4a9c";
+                        break;
+                    }
+                    case "Aviators": {
+                        songLink = "https://firebasestorage.googleapis.com/v0/b/auxbox-29cc0.appspot.com/o/Aviators%20-%20Dystopian%20Fiction.mp3?alt=media&token=7f2a4d0d-f56b-4c28-808b-1338066ce4df";
+                        break;
+                    }
                     default: {
                         songLink = "";
                         break;
