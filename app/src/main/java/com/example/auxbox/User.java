@@ -100,7 +100,7 @@ public class User extends AppCompatActivity {
 
                     //insert data into the hash map
                     // the key is the firebase field and the obj is the thing going in
-                    song.put("requestingUser", userID);
+                    //song.put("requestingUser", userID);
                     song.put("databaseLink", songLink);
 
                     //insert the data to the database
