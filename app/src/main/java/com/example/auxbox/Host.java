@@ -87,6 +87,8 @@ public class Host extends AppCompatActivity {
         mediaPlayer.pause();
     }
 
+
+
     private void prepare()
     {
         mediaPlayer = new MediaPlayer();

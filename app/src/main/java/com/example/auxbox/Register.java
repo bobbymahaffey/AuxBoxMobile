@@ -49,7 +49,7 @@ public class Register extends AppCompatActivity{
         mFullName = findViewById(R.id.fullname);
         mEmail    = findViewById(R.id.email);
         mPassword = findViewById(R.id.password);
-        mPhone    = findViewById(R.id.phonenumber);
+        mPhone    = findViewById(R.id.phoneNumber);
         mRegisterBtn = findViewById(R.id.registerBtn);
         mLoginBtn    = findViewById(R.id.loginRedirect);
 
