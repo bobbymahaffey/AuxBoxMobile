@@ -52,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void logout(View view) {
-        //wants user clicks log out it will log them out of firebase
+        //once user clicks log out it will log them out of firebase
         FirebaseAuth.getInstance().signOut();
-        //since user is logged our now we need to have them log back in
+        //since user is logged out now we need to have them log back in
         startActivity(new Intent(getApplicationContext(), Login.class));
         finish();
     }
