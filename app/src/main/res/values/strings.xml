@@ -35,5 +35,6 @@
     <string name="pause_text">Pause</string>
     <string name="song_link_text">Song Title</string>
     <string name="song_committed_to_db">Song sent to database!</string>
+    <string name="song_failed_commit_to_db">Song failed to be sent to the database</string>
 
 </resources>
