@@ -14,9 +14,11 @@ package com.example.auxbox;
         import com.google.firebase.database.DatabaseReference;
         import com.google.firebase.database.FirebaseDatabase;
         import com.google.firebase.database.ValueEventListener;
+        import com.google.firebase.firestore.CollectionReference;
         import com.google.firebase.firestore.DocumentReference;
         import com.google.firebase.firestore.FirebaseFirestore;
         import java.io.IOException;
+        import java.util.Collection;
         import java.util.HashMap;
         import java.util.Map;
 
