@@ -9,7 +9,7 @@
     tools:context=".Register">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
@@ -20,10 +20,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086" />
+        app:layout_constraintVertical_bias="0.060" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/screenDescriptionTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
@@ -32,13 +32,13 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
     <EditText
         android:id="@+id/fullname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="45dp"
         android:ems="10"
         android:fontFamily="@font/aclonica"
         android:hint="@string/full_name_text_hint"
@@ -49,7 +49,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/screenDescriptionTextView"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/password"
@@ -66,7 +67,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fullname" />
+        app:layout_constraintTop_toBottomOf="@+id/fullname"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/email"
@@ -83,28 +85,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        android:importantForAutofill="no" />
 
     <EditText
-        android:id="@+id/phonenumber"
+        android:id="@+id/phoneNumber"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:fontFamily="@font/aclonica"
         android:hint="@string/phone_number_text_hint"
-        android:inputType="textPhonetic"
+        android:inputType="phone"
         android:textColor="#FCF5F2F2"
         android:textColorHint="#F7F3F3"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/registerBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="45dp"
         android:fontFamily="@font/aclonica"
         android:text="@string/register_text"
         android:textColor="#130202"
@@ -112,7 +117,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phonenumber" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
 
     <TextView
         android:id="@+id/loginRedirect"
@@ -124,7 +129,6 @@
         android:textColor="@color/common_google_signin_btn_text_dark_pressed"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerBtn" />
 
@@ -136,7 +140,6 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginRedirect"
         app:layout_constraintVertical_bias="0.163" />
