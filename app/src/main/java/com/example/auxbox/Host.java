@@ -108,6 +108,14 @@ public class Host extends AppCompatActivity {
                         source = document.getData().toString();
                         String temp[] = source.split("=", 2);
                         source = temp[1];
+                        try {
+                                mediaPlayer.setDataSource(source);
+                                mediaPlayer.prepare();
+
+                        } catch(IOException e)
+                        {
+                            e.printStackTrace();
+                        }
                     } else {
                         Log.d(TAG, "No such document");
                     }
@@ -119,15 +127,7 @@ public class Host extends AppCompatActivity {
             }
         });
 
-        try {
-            if (source.length() > 20) {
-                mediaPlayer.setDataSource(source);
-                mediaPlayer.prepare();
-            }
-        } catch(IOException e)
-        {
-            e.printStackTrace();
-        }
+
     }
 }
 
