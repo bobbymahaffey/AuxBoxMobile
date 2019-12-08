@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "658144910519-usukbcl96ctkhcrs330g7ur860gfed60.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.auxbox",
+            "certificate_hash": "99a9a08cb355cbaf9f2c7e61adfdc37776931921"
+          }
+        },
+        {
           "client_id": "658144910519-62rcvhoflea2f78nomnjq282a2q09l0u.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
