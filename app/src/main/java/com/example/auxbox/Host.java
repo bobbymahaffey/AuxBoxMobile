@@ -90,9 +90,10 @@ public class Host extends AppCompatActivity {
     private void prepare()
     {
         mediaPlayer = new MediaPlayer();
-        DatabaseReference fRef = fDatabase.getReference("playlist/demo");
-        try {
+        DatabaseReference dRef = fDatabase.getReference();
+        source = "https://firebasestorage.googleapis.com/v0/b/auxbox-29cc0.appspot.com/o/Coldplay%20-%20Orphans.mp3?alt=media&token=505fe083-1df8-4b5c-8c5f-db25ca540c71";
 
+        try {
             if (source.length() > 20) {
                 mediaPlayer.setDataSource(source);
                 mediaPlayer.prepare();
