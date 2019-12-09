@@ -38,7 +38,7 @@ public class Host extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_host);
 
-        mPlayBtn = findViewById(R.id.playButton);
+        mPlayBtn = findViewById(R.id.downloadPlaylistButton);
         mStopBtn = findViewById(R.id.stopButton);
         mPauseBtn = findViewById(R.id.pauseButton);
         fDatabase = FirebaseDatabase.getInstance();
@@ -47,7 +47,13 @@ public class Host extends AppCompatActivity {
         mPlayBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                playSong();
+                if (prepared) {
+                    playSong();
+                }
+                else {
+                    prepare();
+                }
+
             }
         });
         mStopBtn.setOnClickListener(new View.OnClickListener() {
@@ -66,13 +72,8 @@ public class Host extends AppCompatActivity {
 
     public void playSong()
     {
-        if(!playing) {
-            prepare();
-        }
-        if (prepared) {
             mediaPlayer.start();
             playing = true;
-        }
     }
 
     public void stopSong()
@@ -82,6 +83,7 @@ public class Host extends AppCompatActivity {
             mediaPlayer = null;
             playing = false;
             prepared = false;
+            mPlayBtn.setText(R.string.download_playlist);
     }
 
     public void pauseSong()
@@ -112,6 +114,7 @@ public class Host extends AppCompatActivity {
                                 mediaPlayer.setDataSource(source);
                                 mediaPlayer.prepare();
                                 prepared = true;
+                                mPlayBtn.setText(R.string.play_text);
                         } catch(IOException e)
                         {
                             e.printStackTrace();
@@ -123,7 +126,6 @@ public class Host extends AppCompatActivity {
                 } else {
                     Log.d(TAG, "get failed with ", task.getException());
                 }
-
             }
         });
 
