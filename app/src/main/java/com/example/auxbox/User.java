@@ -84,7 +84,7 @@ public class User extends AppCompatActivity {
                         break;
                     }
                     default: {
-                        songLink = "";
+                        songLink = "https://firebasestorage.googleapis.com/v0/b/auxbox-29cc0.appspot.com/o/Rick%20Astley%20-%20Never%20Gonna%20Give%20You%20Up.mp3?alt=media&token=1b4f70a3-97ec-477b-b17b-96b8bdb6b0e7";
                         break;
                     }
 
