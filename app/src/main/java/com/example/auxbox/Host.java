@@ -100,6 +100,7 @@ public class Host extends AppCompatActivity {
 
     private void prepare()
     {
+
         mediaPlayer = new MediaPlayer();
         DocumentReference docRef = fFirestore.collection("playlist").document("demo");
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
