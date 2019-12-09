@@ -9,10 +9,5 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class HostTest {
-    @Test
-    public void playingFalse() {
-        Host hostTest = new Host();
-        assertFalse(hostTest.playing);
-    }
-}
+
+
