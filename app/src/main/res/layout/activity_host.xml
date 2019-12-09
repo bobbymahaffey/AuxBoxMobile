@@ -9,16 +9,17 @@
 <androidx.constraintlayout.widget.ConstraintLayout
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".Host">
 
     <TextView
         android:id="@+id/hostSessionHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="40dp"
         android:fontFamily="@font/aclonica"
         android:text="@string/host_session_text"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,6 +30,7 @@
         android:id="@+id/downloadPlaylistButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="60dp"
         android:fontFamily="@font/aclonica"
         android:text="@string/download_playlist"
         android:textSize="30sp"
@@ -42,6 +44,7 @@
         android:id="@+id/pauseButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="@string/pause_text"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,6 +55,7 @@
         android:id="@+id/stopButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:text="@string/stop_text"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"

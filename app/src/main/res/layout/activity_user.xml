@@ -10,7 +10,7 @@
 
     android:id="@+id/UserConstraint"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".User">
 
     <TextView
@@ -35,55 +35,58 @@
         android:text="@string/song_title_text"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clientSessionHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/clientSessionHeader"
+        app:layout_constraintVertical_bias="0.00"/>
 
     <EditText
         android:id="@+id/songTitleEditText"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:scrollHorizontally="true"
         android:hint="@string/song_title_text"
+        android:textAlignment="center"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/songTitleHeader"
-        app:layout_constraintTop_toBottomOf="@+id/clientSessionHeader" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songTitleHeader"
+        app:layout_constraintVertical_bias="0.00"/>
 
     <Button
         android:id="@+id/saveSongTitleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/aclonica"
         android:text="@string/song_save_text"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/songTitleHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songTitleEditText"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/songTitleTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="60dp"
         android:text="@string/file_not_found"
         android:textSize="30sp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/saveSongTitleButton"
-        app:layout_constraintTop_toBottomOf="@+id/songTitleEditText"
+        app:layout_constraintTop_toBottomOf="@+id/saveSongTitleButton"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/saveSongToDatabaseButton"
-        style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="0dp"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/aclonica"
@@ -104,6 +107,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/saveSongToDatabaseButton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.00"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

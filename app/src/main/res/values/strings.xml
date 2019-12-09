@@ -37,5 +37,6 @@
     <string name="song_committed_to_db">Song sent to database!</string>
     <string name="song_failed_commit_to_db">Song failed to be sent to the database</string>
     <string name="download_playlist">Get Queue</string>
+    <string name="main_page_greeting">Welcome to AuxBox</string>
 
 </resources>
