@@ -35,12 +35,12 @@ public class Host extends AppCompatActivity {
     private FirebaseDatabase fDatabase;
     private FirebaseFirestore fFirestore;
     final String TAG = "TAG";
-    private String source = "";
 
 
     private MediaPlayer mediaPlayer;
 
     private boolean playing = false;
+    private boolean prepared = false;
 
 
     @Override
@@ -79,8 +79,10 @@ public class Host extends AppCompatActivity {
         if(!playing) {
             prepare();
         }
-        mediaPlayer.start();
-        playing = true;
+        if (prepared) {
+            mediaPlayer.start();
+            playing = true;
+        }
     }
 
     public void stopSong()
@@ -89,6 +91,7 @@ public class Host extends AppCompatActivity {
             mediaPlayer.release();
             mediaPlayer = null;
             playing = false;
+            prepared = false;
     }
 
     public void pauseSong()
@@ -109,24 +112,27 @@ public class Host extends AppCompatActivity {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
                         Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-                        source = document.getData().toString();
+                        String source = document.getData().toString();
                         String temp[] = source.split("=", 2);
                         source = temp[1];
+                        if (source.contains("}")) {
+                            source = source.substring(0, source.length()-1);
+                        }
                         try {
                                 mediaPlayer.setDataSource(source);
                                 mediaPlayer.prepare();
-
+                                prepared = true;
                         } catch(IOException e)
                         {
                             e.printStackTrace();
                         }
                     } else {
                         Log.d(TAG, "No such document");
+                        prepared = false;
                     }
                 } else {
                     Log.d(TAG, "get failed with ", task.getException());
                 }
-
 
             }
         });
